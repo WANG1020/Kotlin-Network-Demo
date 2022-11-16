@@ -1,5 +1,7 @@
 package com.example.networkdemo.api
 
+import com.example.networkdemo.data.model.edplogin.ResponseEDPLogin
+import com.example.networkdemo.data.model.edplogin.ResponseGetWarehouseTypeByStoreId
 import com.example.networkdemo.data.model.login.ResponseLoggedInUser
 import com.example.networkdemo.data.model.login.ResponseLogout
 import com.example.networkdemo.data.model.home.ResponseHomepagIcon
@@ -17,8 +19,8 @@ interface ApiService {
     suspend fun getHomepageInfo(): ResponseHomepagIcon
 
     @POST("/nav/web")
-    suspend fun edpLogin(): ResponseHomepagIcon
+    suspend fun edpLogin(): ResponseEDPLogin
 
     @POST("/nav/back-end")
-    suspend fun getWarehouseTypeByStoreId(): ResponseHomepagIcon
+    suspend fun getWarehouseTypeByStoreId(): ResponseGetWarehouseTypeByStoreId
 }

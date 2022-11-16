@@ -1,7 +1,5 @@
 package com.example.networkdemo.ui.main.view
 
-import android.content.Intent
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,11 +20,12 @@ import com.example.networkdemo.data.model.home.MenuList
 import com.example.networkdemo.ui.base.ViewModelFactory
 import com.example.networkdemo.ui.main.adapter.HomePageAdapter
 import com.example.networkdemo.ui.main.viewmodel.HomepageViewModel
-import com.kpa.demo.utils.Status
-import org.w3c.dom.Text
+import com.example.networkdemo.utils.Status
 
 class HomepageActivity : AppCompatActivity() {
-    private val TAG: String = "HomepageActivity"
+    companion object {
+        const val TAG: String = "HomepageActivity"
+    }
     private lateinit var homepageViewModel: HomepageViewModel
     private lateinit var adapter: HomePageAdapter
     private lateinit var recyclerView: RecyclerView
@@ -78,6 +77,7 @@ class HomepageActivity : AppCompatActivity() {
                         Log.e(TAG,"Error")
                     }
                     Status.LOADING -> {
+
                         Log.i(TAG,"LOADING")
                     }
                 }

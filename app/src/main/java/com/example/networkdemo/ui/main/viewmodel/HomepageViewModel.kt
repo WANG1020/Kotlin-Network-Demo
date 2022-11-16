@@ -4,7 +4,8 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.networkdemo.data.respository.HomepageRepository
-import com.kpa.demo.utils.Resource
+import com.example.networkdemo.ui.main.view.HomepageActivity
+import com.example.networkdemo.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import java.lang.Exception
 
@@ -12,11 +13,11 @@ class HomepageViewModel(private val homepageRepository: HomepageRepository) : Vi
     fun logout() = liveData(Dispatchers.IO) {
         emit(Resource.loading(null))
         try {
-            Log.d("MainViewModel","start send request")
+            Log.d(HomepageActivity.TAG,"start send request")
             emit(Resource.success(homepageRepository.logout()))
-            Log.d("MainViewModel","end send request")
+            Log.d(HomepageActivity.TAG,"end send request")
         } catch (e: Exception) {
-            Log.e("MainViewModel",e.message.toString())
+            Log.e(HomepageActivity.TAG, e.message.toString())
             emit(Resource.error(e.message, null))
         }
     }
@@ -24,11 +25,11 @@ class HomepageViewModel(private val homepageRepository: HomepageRepository) : Vi
     fun getHomepageInfo() = liveData(Dispatchers.IO) {
         emit(Resource.loading(null))
         try {
-            Log.d("MainViewModel","start send request")
+            Log.d(HomepageActivity.TAG,"start send request")
             emit(Resource.success(homepageRepository.getHomepageInfo()))
-            Log.d("MainViewModel","end send request")
+            Log.d(HomepageActivity.TAG,"end send request")
         } catch (e: Exception) {
-            Log.e("MainViewModel",e.message.toString())
+            Log.e(HomepageActivity.TAG, e.message.toString())
             emit(Resource.error(e.message, null))
         }
     }

@@ -1,4 +1,4 @@
-package com.kpa.demo.utils
+package com.example.networkdemo.utils
 
 
 enum class Status {

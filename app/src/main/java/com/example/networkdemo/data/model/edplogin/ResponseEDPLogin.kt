@@ -1,10 +1,10 @@
-package com.example.networkdemo.data.model.login
+package com.example.networkdemo.data.model.edplogin
 
 import com.google.gson.annotations.SerializedName
 
-class ResponseLoggedInUser(
+data class ResponseEDPLogin(
     @SerializedName("data")
-    val loggedInUser: LoggedInUser,
+    val storeList: StoreListAndToken,
 
     val elapsedTime: Int,
     val errorCode: Int,
@@ -13,3 +13,4 @@ class ResponseLoggedInUser(
     val serverTime: Long,
     val success: Boolean
 )
+

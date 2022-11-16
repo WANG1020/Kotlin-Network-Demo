@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NetworkDemo">
         <activity
-            android:name=".SelectWarehouseActivity"
+            android:name=".ui.main.view.SelectWarehouseActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -39,7 +39,7 @@
         </activity>
         <activity
             android:name=".ui.main.view.LoginActivity"
-            android:exported="true">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

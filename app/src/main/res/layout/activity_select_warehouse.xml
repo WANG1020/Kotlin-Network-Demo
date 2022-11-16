@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.view.SelectWarehouseActivity">
 
+    <include layout="@layout/header"/>
+
+    <Spinner
+        android:id="@+id/spnSelectStore"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="85dp"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@drawable/shape_for_custom_spinner"
+        android:background="@drawable/selector_for_custom_spinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spnSelectWarehouse"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@drawable/shape_for_custom_spinner"
+        android:background="@drawable/selector_for_custom_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spnSelectStore"
+        app:layout_constraintLeft_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/i_button_shape"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

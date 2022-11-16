@@ -15,4 +15,6 @@
     <string name="rule_pwd">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
     <string name="temp_tvIconName">前场料位维护</string>
     <string name="edp_login">EDP登陆</string>
+    <string name="select_store">选择登陆门店</string>
+    <string name="submit">确定</string>
 </resources>
